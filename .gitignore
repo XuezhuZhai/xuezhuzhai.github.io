@@ -1,0 +1,18 @@
+.vs/
+Fig2.png
+Fig3.png
+Screenshot 2026-08-21 094442.png
+~$*.xlsx
+articles_output.html
+__pycache__/
+conferences_output.html
+talks_output.html
+NZJL_*.png
+YGC_*.jpg
+news_output.html
+from the field/
+# originals stay local; the site uses media/
+/*.png
+/*.jpg
+/*.jpeg
+/*.mp4

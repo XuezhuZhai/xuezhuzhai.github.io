@@ -1,0 +1,1173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Xuezhu Zhai | Understanding How Nature's Value Is Seen, Experienced and Acted Upon</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300;1,9..144,400&family=DM+Mono:wght@300;400&family=Inter:wght@300;400&family=Noto+Serif+SC:wght@300;400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f2f5f4;--bg2:#e8eeed;--bg3:#dde6e4;
+  --ink:#0f1e1c;--muted:#4a6b66;--dim:#8aaba6;
+  --accent:#0a7c6e;--accent2:#0e9c8a;--water:#1a6478;
+  --border:rgba(10,124,110,.15);--border2:rgba(10,124,110,.08);
+  --serif:'Fraunces',Georgia,serif;--sans:'Inter',system-ui,sans-serif;--mono:'DM Mono',monospace;
+  --nav-h:52px;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-weight:300;font-size:16px;line-height:1.42;overflow-x:hidden}
+
+
+/* ── CONTAINER ───────────────────────────────── */
+:root{--max-w:1000px}
+.container{width:100%;max-width:var(--max-w);margin:0 auto;padding:0 2rem}
+/* ── NAV ─────────────────────────────────────── */
+nav{position:fixed;top:0;left:0;right:0;z-index:300;background:rgba(242,245,244,.96);backdrop-filter:blur(12px);border-bottom:1px solid var(--border2)}
+.nav-top{display:flex;justify-content:space-between;align-items:stretch;height:var(--nav-h);max-width:var(--max-w);margin:0 auto;padding:0 2rem}
+.nav-logo{font-family:var(--mono);font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);text-decoration:none;display:flex;align-items:center;transition:color .2s}
+.nav-logo:hover{color:var(--accent)}
+.nav-main{display:flex;list-style:none;height:100%}
+.nav-main > li{position:relative;height:100%}
+.nav-main > li > a{font-family:var(--mono);font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);text-decoration:none;display:flex;align-items:center;height:100%;padding:0 1rem;border-bottom:2px solid transparent;transition:color .2s,border-color .2s;white-space:nowrap}
+.nav-main > li > a:hover,.nav-main > li > a.active{color:var(--accent);border-bottom-color:var(--accent)}
+/* dropdown */
+.nav-dropdown{display:none;position:absolute;top:100%;left:0;background:rgba(242,245,244,.98);border:1px solid var(--border2);border-top:none;min-width:180px;padding:.4rem 0}
+.nav-main > li:hover .nav-dropdown{display:block}
+.nav-dropdown a{display:block;font-family:var(--mono);font-size:.58rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);text-decoration:none;padding:.6rem 1.2rem;transition:color .15s,background .15s}
+.nav-dropdown a:hover{color:var(--accent);background:var(--bg2)}
+.has-drop > a::after{content:'›';margin-left:.35rem;font-style:normal;opacity:.5;font-size:.8rem}
+/* lang toggle */
+.nav-lang{display:flex;align-items:center;margin-left:1.5rem}
+.lang-toggle{display:flex;border:1px solid var(--border);border-radius:2px;overflow:hidden}
+.lang-toggle button{font-family:var(--mono);font-size:.56rem;letter-spacing:.1em;text-transform:uppercase;padding:.3rem .6rem;border:none;background:none;cursor:pointer;color:var(--dim);transition:background .15s,color .15s}
+.lang-toggle button.active{background:var(--accent);color:#fff}
+
+/* ── HERO ────────────────────────────────────── */
+.hero{padding:calc(var(--nav-h) + 1.5rem) 0 1rem}
+.hero-inner{max-width:var(--max-w);margin:0 auto;padding:0 2rem;display:flex;flex-direction:column;gap:1rem}
+
+/* Top block: name + marquee on left, photo spanning both on right */
+.hero-top-grid{display:grid;grid-template-columns:2fr 1fr;grid-template-rows:auto auto;column-gap:3rem;align-items:start}
+.hero-top-grid .hero-name{grid-column:1;grid-row:1;padding-bottom:.5rem}
+.hero-top-grid .hero-photo{grid-column:2;grid-row:1/3;width:70%;aspect-ratio:1/1;align-self:start;justify-self:start}
+.hero-top-grid .hero-marquee{grid-column:1;grid-row:2}
+
+.hero-name{font-family:var(--serif);font-size:clamp(2rem,4vw,3.2rem);line-height:1.03;letter-spacing:-.02em}
+.hero-name em{font-style:normal;color:var(--accent);font-family:'Noto Serif SC','PingFang SC','Source Han Serif CN',serif;font-size:.72em;font-weight:300;display:block;margin-top:.1rem;letter-spacing:.05em}
+.hero-marquee{border-top:1px solid var(--border2);border-bottom:1px solid var(--border2);padding:.5rem 0;display:flex;flex-direction:column;gap:.4rem;overflow:hidden}
+.kw-row{display:flex;gap:.4rem;animation:kw-loop 40s linear infinite;width:max-content}
+.kw-row-rev{animation-direction:reverse;animation-duration:50s}
+@keyframes kw-loop{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.kw{font-family:var(--mono);font-size:.58rem;letter-spacing:.06em;text-transform:uppercase;padding:.22rem .65rem;border-radius:99px;white-space:nowrap;border:1px solid;flex-shrink:0}
+.kw-domain{color:var(--accent);border-color:rgba(10,124,110,.35);background:rgba(10,124,110,.05)}
+.kw-method{color:#3a5555;border-color:rgba(58,85,85,.3);background:rgba(58,85,85,.05)}
+
+/* Body row: bio left, cv right */
+.hero-body-row{display:grid;grid-template-columns:2fr 1fr;column-gap:3rem;align-items:start}
+.hero-body-row .hero-left{display:contents}
+.hero-left>*{grid-column:1}
+.hero-left>.about-h{grid-column:1/-1;font-size:clamp(1.1rem,2vw,1.6rem)}
+.hero-left>.hero-desc{grid-row:3}
+.news-card{grid-column:2;grid-row:3;align-self:center;width:70%;background:var(--bg2);border:1px solid var(--border2);border-radius:10px;padding:.75rem .8rem}
+.news-label{font-family:var(--mono);font-size:.56rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:.35rem}
+.news-text{font-size:.84rem;line-height:1.5;color:var(--ink)}
+.lang-zh .news-text.t-zh{display:block}
+.news-text a{color:var(--accent);text-decoration:underline;text-underline-offset:2px;white-space:nowrap}
+.news-text a:hover{opacity:.7}
+.hero-left{display:flex;flex-direction:column}
+.hero-desc{font-size:.88rem;color:var(--muted);line-height:1.54}
+.hero-desc .t-zh{font-family:'Noto Serif SC','PingFang SC',serif;font-size:.84rem;line-height:1.6}
+.lang-zh .hero-desc p.t-zh{display:block}
+.hero-desc .t-en+.t-en,.hero-desc .t-zh+.t-zh{margin-top:.68rem}
+
+/* photo */
+.hero-photo{background:var(--bg3);border:1px solid var(--border2);overflow:hidden;position:relative}
+.hero-photo img{width:100%;height:100%;object-fit:cover;display:block}
+
+/* ── BILINGUAL DISPLAY ───────────────────────── */
+/* ── BILINGUAL DISPLAY ───────────────────────── */
+/* 保持原有逻辑不动，确保全局兼容性 */
+.t-zh { display: none; }
+.lang-zh .t-en { display: none; }
+.lang-zh .t-zh { display: inline-flex; }
+
+/* 🔴 新增补丁：专门修复 Highlights 部分的“权重”和“排版”问题 */
+
+/* 1. 修复中文模式下列表横排的问题：强制 ul 恢复块级排列 */
+.lang-zh ul.t-zh {
+    display: block !important;
+}
+
+/* 2. 修复英文模式下“双语并存”：如果普通 .t-zh 藏不住，这里强行补一刀 */
+body:not(.lang-zh) .p-highlights-label .t-zh,
+body:not(.lang-zh) ul.highlights-list.t-zh {
+    display: none !important;
+}
+
+/* 3. 确保列表项垂直排列 */
+ul.highlights-list li {
+    display: list-item !important;
+    width: 100%;
+}
+
+
+/* ── MARQUEE (shared track styles) ───────────── */
+.marquee-wrap{overflow:hidden;border-top:1px solid var(--border2);border-bottom:1px solid var(--border2);padding:.85rem 0;background:var(--bg2)}
+.marquee-track{display:flex;animation:marquee 32s linear infinite;white-space:nowrap;align-items:center}
+.mi{font-family:var(--mono);font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:var(--dim);padding:0 1.8rem}
+.md{color:var(--accent);opacity:.5}
+.mtag{font-family:var(--sans);font-size:.68rem;font-weight:400;color:var(--accent);border:1px solid var(--border);padding:.1rem .7rem;border-radius:99px;margin:0 .6rem;background:rgba(10,124,110,.04)}
+@keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* ── SHARED ──────────────────────────────────── */
+.sec{padding:2rem 0;border-bottom:1px solid var(--border2)}.sec > .container{padding-top:0;padding-bottom:0}
+.sec-label{font-family:var(--mono);font-size:1rem;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);margin-bottom:.9rem;display:flex;align-items:center;gap:.7rem}
+.sec-label::before{content:'';display:block;width:18px;height:1px;background:var(--accent)}
+.sec-h{font-family:var(--serif);font-size:clamp(1.1rem,2vw,1.6rem);line-height:1.03;letter-spacing:-.02em;color:var(--ink)}
+.sec-h em{font-style:italic;color:var(--accent)}
+.sec-header{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:1.5rem}
+.cta{display:inline-flex;align-items:center;gap:.5rem;font-family:var(--mono);font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink);text-decoration:none;border-bottom:1px solid var(--dim);padding-bottom:2px;transition:color .25s,border-color .25s;white-space:nowrap}
+.cta:hover{color:var(--accent);border-color:var(--accent)}
+.cta svg{width:11px;height:11px}
+.tag{font-family:var(--mono);font-size:.54rem;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);border:1px solid var(--border);padding:.16rem .5rem;border-radius:2px;background:rgba(10,124,110,.04)}
+.pill-links{display:flex;gap:.rem;flex-wrap:wrap;margin-top:.38rem}
+.pill{font-family:var(--mono);font-size:.54rem;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);text-decoration:none;border:1px solid var(--border);padding:.16rem .5rem;border-radius:2px;transition:background .2s,color .2s}
+.pill:hover{background:var(--accent);color:#fff}
+
+/* ── ABOUT ───────────────────────────────────── */
+.about-l{max-width:600px}
+.about-h{font-family:var(--serif);font-size:clamp(1.8rem,3.5vw,2.8rem);line-height:1.06;letter-spacing:-.02em;margin-bottom:1rem}
+.about-h em{font-style:italic;color:var(--accent)}
+.about-p{color:var(--muted);line-height:1.54;font-size:.95rem;margin-bottom:1.4rem}
+
+/* ── RESEARCH TABS ───────────────────────────── */
+.r-tabs{display:flex;border-bottom:1px solid var(--border2);background:var(--bg);position:sticky;top:var(--nav-h);z-index:100}.r-tabs-inner{max-width:var(--max-w);margin:0 auto;padding:0 2rem;display:flex}
+.r-tab{font-family:var(--mono);font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:var(--dim);padding:1rem 0;margin-right:2.5rem;cursor:pointer;border:none;border-bottom:2px solid transparent;background:none;transition:color .2s,border-color .2s}
+.r-tab:hover{color:var(--muted)}
+.r-tab.active{color:var(--accent);border-bottom-color:var(--accent)}
+
+/* ── PAPERS ──────────────────────────────────── */
+.papers-wrap{padding:0 0 2.5rem}.papers-wrap > .container{padding-top:0;padding-bottom:0}
+.papers-list{border-top:1px solid var(--border2)}
+.paper-card {
+  display: grid;  /* 第一列根据图片自动，第二列占据余下空间 */
+  grid-template-columns: auto 1fr; 
+  border-bottom: 1px solid var(--border2);
+  cursor: pointer;
+  overflow: hidden;
+  transition: background .2s;
+}
+.paper-card:hover{background:var(--bg2)}
+.paper-card.open{background:var(--bg2)}
+.p-thumb {
+  padding: .75rem;
+  grid-column: 1;
+}
+.p-thumb::before{content:'';position:absolute;top:0;left:0;right:0;height:3px}
+.paper-card:nth-child(5n+1) .p-thumb::before{background:linear-gradient(90deg,#0a7c6e,#0e9c8a)}
+.paper-card:nth-child(5n+2) .p-thumb::before{background:linear-gradient(90deg,#1a6478,#0a7c6e)}
+.paper-card:nth-child(5n+3) .p-thumb::before{background:linear-gradient(90deg,#0a7c6e,#2aaf9a)}
+.paper-card:nth-child(5n+4) .p-thumb::before{background:linear-gradient(90deg,#1a6478,#2a8a9e)}
+.paper-card:nth-child(5n) .p-thumb::before{background:linear-gradient(90deg,#0e9c8a,#1a6478)}
+.p-journal{font-family:var(--serif);font-size:.64rem;font-style:italic;color:var(--muted);margin-top:.4rem;margin-bottom:auto}
+.p-art {
+    width: 50px !important;
+    height: auto !important;
+    overflow: hidden !important;
+    transition: all 0.4s ease !important;
+    display: flex;
+    align-items: left;
+    justify-content: center;
+  }
+  /* 封面完整显示，不裁切 */
+  .p-art img {
+    width: 100% !important;
+    height: auto !important;
+    object-fit: contain !important;
+    display: block !important;
+  }
+.p-graphical-abstract {
+    width: 100% !important;
+    margin-bottom: .75rem !important;
+    display: block !important;
+  }
+.p-graphical-abstract img {
+    width: 100% !important;       /* 宽度撑满详情区域 */
+    height: auto !important;      /* 高度自动，绝对不拉伸 */
+    max-width: 800px;             /* 限制最大宽度，防止在大屏幕上过大 */
+    border-radius: 6px;           /* 增加一点圆角更好看 */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08); /* 增加一点阴影提升质感 */
+    display: block;
+  }  
+.highlights-list {
+  display: flex !important;
+  flex-direction: column !important; /* 强制垂直堆叠 */
+  list-style-type: disc !important;   /* 确保小圆点出现 */
+  padding-left: 1.5rem !important;
+  text-align: left !important;
+}
+.highlights-list li {
+  margin-bottom: .25rem; /* 每行之间的间距 */
+  line-height: 1.3;      /* 提升阅读舒适度 */
+}
+.p-highlights-label {
+  display: block; /* 确保占据整行 */
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--accent);
+  font-weight: 700;
+  margin-bottom: .5rem;
+  padding-bottom: .15rem;
+  border-bottom: 1px solid var(--border2);
+}
+
+/* 确保在不同语言下，标题的间距感一致 */
+.p-highlights-label span {
+  display: inline-block;
+}
+
+/* 列表行间距稍微加大，让中文阅读更舒适 */
+.highlights-list li {
+  margin-bottom: .35rem;
+  line-height: 1.36;
+}
+.p-thumb-title{font-size:.63rem;line-height:1.24;color:var(--muted);font-weight:300}
+.p-year{font-family:var(--mono);font-size:.53rem;letter-spacing:.1em;color:var(--dim);margin-top:.3rem}
+.p-meta{grid-column:2;grid-row:1;padding:.75rem .75rem .75rem 0;min-width: 0; display:flex;justify-content:space-between;align-items:flex-start;gap:.5rem}
+.p-meta-body{flex:1}
+.p-venue{font-family:var(--mono);font-size:.85rem;letter-spacing:.08em;text-transform:uppercase;color:var(--dim);margin-bottom:.18rem}
+.p-title{font-family:var(--serif);font-size:1.05rem;font-weight: 200; line-height:1.21;letter-spacing:-.01em;color:var(--ink);margin-bottom:.15rem}
+.p-authors{font-size:.9rem;color:var(--muted)}
+.me {
+  font-weight: 400; /* 加粗 */
+  color: var(--ink); /* 颜色深一点点 */
+}
+.expand-btn{width:24px;height:24px;border:1px solid var(--border);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:transform .3s,border-color .3s,background .2s;margin-top:.2rem}
+.paper-card.open .expand-btn{transform:rotate(45deg);border-color:var(--accent);background:var(--accent)}
+.paper-card.open .expand-btn svg{color:#fff}
+.expand-btn svg{width:9px;height:9px;color:var(--muted)}
+.p-abstract{grid-column:1 / span 2;grid-row:2;max-height:0;overflow:hidden;transition:max-height .45s ease}
+.paper-card.open .p-abstract{max-height:2000px}
+.p-abstract-inner{padding:.75rem 1rem 1rem .75rem;border-top:1px solid var(--border2);padding-top:.5rem}
+.abs-lang-btns{display:flex;gap:.4rem;margin-bottom:.8rem}
+.abs-lang-btn{font-family:var(--mono);font-size:.52rem;letter-spacing:.1em;text-transform:uppercase;padding:.14rem .5rem;border:1px solid var(--border);background:none;cursor:pointer;color:var(--dim);border-radius:2px;transition:background .15s,color .15s}
+.abs-lang-btn.active{background:var(--accent);color:#fff;border-color:var(--accent)}
+.abs-text{font-size:.84rem;color:var(--muted);line-height:1.48}
+.abs-text.hidden{display:none}
+
+/* ── CONFERENCE SLIDER ───────────────────────── */
+.conf-slider-wrap{padding:2rem 0 2.5rem}
+.conf-slider-head{margin-bottom:1.5rem}
+.conf-track-outer{overflow:hidden;cursor:grab;user-select:none;touch-action:pan-y}
+.conf-track-outer.is-dragging{cursor:grabbing;transition:none}
+.conf-deck{display:flex;gap:1.5rem;transition:transform .45s cubic-bezier(.4,0,.2,1);will-change:transform}
+.conf-slide{flex:0 0 calc((100% - 3rem) / 3);min-height:200px;border-radius:14px;padding:.9rem .9rem .75rem;color:#fff;box-shadow:0 8px 32px rgba(10,40,50,.18)}
+.conf-slide-inner{display:flex;flex-direction:column;height:100%}
+.conf-slide-badge{font-family:var(--mono);font-size:.52rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.55);margin-bottom:.15rem}
+.conf-slide-event{font-family:var(--mono);font-size:.58rem;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.7);margin-bottom:.45rem}
+.conf-slide-title{font-family:var(--serif);font-size:1.05rem;line-height:1.21;color:#fff;flex:1}
+.conf-slide-venue{font-size:.76rem;color:rgba(255,255,255,.62);line-height:1.3;margin-top:.4rem}
+.conf-slide-footer{display:flex;align-items:center;justify-content:space-between;margin-top:.5rem}
+.conf-slide-type{font-family:var(--mono);font-size:.5rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.7);border:1px solid rgba(255,255,255,.3);padding:.12rem .45rem;border-radius:2px}
+.conf-slide-date{font-family:var(--mono);font-size:.54rem;letter-spacing:.06em;color:rgba(255,255,255,.45)}
+/* Navigation */
+.conf-slider-nav{display:flex;align-items:center;justify-content:center;gap:1.2rem;margin-top:.75rem;padding:0 2rem}
+.conf-dots{display:flex;gap:.45rem;align-items:center}
+.conf-dot-item{width:7px;height:7px;border-radius:50%;background:var(--border2);border:1.5px solid var(--dim);transition:background .2s,transform .2s,border-color .2s;cursor:pointer;padding:0;flex-shrink:0}
+.conf-dot-item.active{background:var(--accent);border-color:var(--accent);transform:scale(1.25)}
+.conf-arrow{width:30px;height:30px;border:1px solid var(--border);background:var(--bg);cursor:pointer;display:flex;align-items:center;justify-content:center;border-radius:2px;transition:border-color .2s,background .2s,color .2s;color:var(--muted)}
+.conf-arrow:hover{border-color:var(--accent);color:var(--accent);background:var(--bg2)}
+.conf-arrow svg{width:10px;height:10px}
+
+/* ── INVITED TALKS ───────────────────────────── */
+.talks{margin-top:2rem}
+#talksTrackOuter{padding:1px}
+.conf-slide-link{font-family:var(--mono);font-size:.54rem;letter-spacing:.08em;text-transform:uppercase;color:#fff;text-decoration:underline;text-underline-offset:2px;margin-top:.3rem;align-self:flex-start}
+.conf-slide-link:hover{color:rgba(255,255,255,.7)}
+.talk-audience{margin-top:.4rem;padding-top:.35rem;border-top:1px solid rgba(255,255,255,.25)}
+.talk-audience-label{font-family:var(--mono);font-size:.5rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.7);margin-bottom:.13rem}
+.talk-audience-text{font-size:.78rem;line-height:1.3;color:#fff}
+.talk-slide{background:linear-gradient(135deg,#e6f3f3,#e3f3ee);color:#0e5f66;border:1.5px solid #0a7c6e;box-shadow:none}
+.talk-slide .conf-slide-badge,.talk-slide .conf-slide-event,.talk-slide .conf-slide-type,.talk-slide .conf-slide-date,.talk-slide .conf-slide-venue,.talk-slide .talk-audience-label{color:#2a7e7a}
+.talk-slide .conf-slide-title,.talk-slide .conf-slide-link,.talk-slide .talk-audience-text{color:#0e5f66}
+.talk-slide .conf-slide-link:hover{color:#0a7c6e}
+.talk-slide .conf-slide-type{border-color:rgba(10,124,110,.45)}
+.talk-slide .talk-audience{border-top-color:rgba(10,124,110,.3)}
+
+/* ── RESEARCH PROJECTS ───────────────────────── */
+.rp-wrap{padding:0 0 2.5rem}.rp-wrap > .container{padding-top:0;padding-bottom:0}
+.rp-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border2);border:1px solid var(--border2);margin-top:1.5rem}
+.rp-card{background:var(--bg);padding:1.1rem 1rem;position:relative;overflow:hidden;transition:background .2s}
+.rp-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--accent),var(--accent2));transform:scaleX(0);transform-origin:left;transition:transform .35s}
+.rp-card:hover::before{transform:scaleX(1)}
+.rp-card:hover{background:var(--bg2)}
+.rp-num{font-family:var(--mono);font-size:.56rem;letter-spacing:.1em;color:var(--dim);margin-bottom:.6rem}
+.rp-title{font-family:var(--serif);font-size:1.3rem;line-height:1.12;letter-spacing:-.01em;color:var(--ink);margin-bottom:.35rem}
+.rp-desc{font-size:.85rem;color:var(--muted);line-height:1.48;margin-bottom:.6rem}
+.rp-tags{display:flex;flex-wrap:wrap;gap:.4rem}
+.lang-zh .rp-desc p.t-zh{display:block}
+.rp-desc .t-en+.t-en,.rp-desc .t-zh+.t-zh{margin-top:.5rem}
+.rp-card-wide{grid-column:1/-1}
+.rp-title a{color:inherit;text-decoration:none}
+.rp-title a:hover{color:var(--accent)}
+.rp-role{font-family:var(--mono);font-size:.56rem;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin-bottom:.35rem}
+.rp-videos{display:grid;grid-template-columns:1fr 1fr;gap:.75rem;margin-bottom:.6rem}
+.rp-video video{display:block;width:100%;aspect-ratio:16/10;object-fit:contain;background:#0f1e1c;border-radius:4px}
+.rp-video figcaption{font-family:var(--mono);font-size:.54rem;letter-spacing:.1em;text-transform:uppercase;color:var(--dim);margin-top:.3rem}
+
+/* ── DESIGN ──────────────────────────────────── */
+.d-projects{display:flex;flex-direction:column;gap:1.5rem;margin-top:1.5rem}
+.d-role{font-size:.82rem;color:var(--muted);line-height:1.42}
+.d-photos{display:grid;grid-template-columns:repeat(6,1fr);gap:4px;margin-top:.5rem}
+.d-photos img{grid-column:span 2;width:100%;aspect-ratio:16/9;object-fit:cover;display:block;background:var(--bg3)}
+.d-photos-5 img:nth-child(-n+2){grid-column:span 3}
+.d-cat{font-family:var(--mono);font-size:.54rem;letter-spacing:.1em;text-transform:uppercase;color:var(--dim);margin-bottom:.2rem}
+.d-title{font-family:var(--serif);font-size:1.05rem;line-height:1.18;letter-spacing:-.01em;color:var(--ink);margin-bottom:.2rem}
+
+/* ── PHOTOGRAPHY ─────────────────────────────── */
+.photo-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:4px;margin-top:1.5rem}
+.photo-item{overflow:hidden}
+.photo-item:nth-child(n+13){display:none}
+.photo-item img{width:100%;aspect-ratio:3/2;object-fit:cover;display:block;background:var(--bg3);transition:transform .5s ease}
+.photo-item:hover img{transform:scale(1.02)}
+
+/* ── FOOTER ──────────────────────────────────── */
+footer{padding:1.75rem 0}.footer-inner{max-width:var(--max-w);margin:0 auto;padding:0 2rem;display:flex;justify-content:space-between;align-items:center}
+.f-name{font-family:var(--serif);font-size:1.3rem;color:var(--ink)}
+.f-email{font-family:var(--mono);font-size:.72rem;letter-spacing:.04em;color:var(--muted);text-decoration:none;transition:color .2s}
+.f-email:hover{color:var(--accent)}
+.f-copy{font-family:var(--mono);font-size:.56rem;letter-spacing:.06em;color:var(--dim)}
+
+/* ── RESPONSIVE ──────────────────────────────── */
+@media(max-width:960px){
+  .has-drop > a::after{display:none}
+  .nav-top{padding:0 1.2rem}
+  .nav-main{overflow-x:auto;scrollbar-width:none}
+  .nav-main::-webkit-scrollbar{display:none}
+  .nav-main > li > a{padding:0 .8rem;font-size:.56rem;white-space:nowrap}
+  .nav-dropdown{display:none!important}
+  .nav-lang{margin-left:.8rem}
+  .hero{padding:calc(var(--nav-h) + 1rem) 0 1.5rem;min-height:auto}.hero-inner{padding:0 1.2rem;gap:.75rem}
+  .hero-name-row{grid-template-columns:1fr;gap:1.5rem}
+  .hero-photo{width:50%}
+  .hero-body-row{grid-template-columns:1fr;row-gap:1rem}
+  .news-card{width:100%;grid-column:1;grid-row:auto}
+  .hero-left>.hero-desc{grid-row:auto}
+  .sec{padding:1.5rem 0}.sec > .container{padding:0 1.2rem}
+  .r-tabs-inner{padding:0 1.2rem}
+  .papers-wrap,.rp-wrap{padding:1.5rem 0 2rem}.papers-wrap > .container,.rp-wrap > .container{padding:0 1.2rem}
+.p-thumb {
+    width: fit-content !important; 
+    flex-shrink: 0 !important; /* 防止被右侧文字挤压 */
+    transition: all 0.4s ease !important;
+  }
+  .conf-wrap{padding:3rem 0 4rem}
+  .conf-head,.conf-nav{padding:0 1.2rem}
+  .conf-track{padding:0 1.2rem}
+  .rp-grid{grid-template-columns:1fr}
+  .d-photos,.d-photos-5{grid-template-columns:1fr 1fr}.d-photos img,.d-photos-5 img:nth-child(-n+2){grid-column:auto}
+  .rp-videos{grid-template-columns:1fr}
+  .photo-grid{grid-template-columns:1fr 1fr}
+  footer{flex-direction:column;gap:.75rem;padding:1.5rem 1.5rem;text-align:center}
+  .footer-inner{flex-direction:column;gap:.5rem}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-top">
+    <a href="#" class="nav-logo">Xuezhu Zhai · 翟雪竹</a>
+    <ul class="nav-main">
+      <li><a href="#hero-top"><span class="t-en">About</span><span class="t-zh">关于我</span></a></li>
+      <li>
+        <a href="#research"><span class="t-en">Research</span><span class="t-zh">研究</span></a>
+      </li>
+      <li><a href="#design"><span class="t-en">Design Portfolio</span><span class="t-zh">设计作品集</span></a></li>
+      <li><a href="#photography"><span class="t-en">Photography</span><span class="t-zh">摄影</span></a></li>
+      <li><a href="#contact"><span class="t-en">Contact</span><span class="t-zh">联系方式</span></a></li>
+    </ul>
+    <div class="nav-lang">
+      <div class="lang-toggle">
+        <button id="btn-en" class="active" onclick="setLang('en')">EN</button>
+        <button id="btn-zh" onclick="setLang('zh')">中文</button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="hero-top">
+  <div class="hero-inner">
+
+    <!-- NAME + MARQUEE (left) / PHOTO (right, spans both) -->
+    <div class="hero-top-grid">
+      <h1 class="hero-name">
+        Xuezhu ZHAI
+        <em>翟雪竹</em>
+      </h1>
+      <div class="hero-photo" style="grid-row:1/3">
+        <img src="media/XZ.jpg" alt="Xuezhu Zhai">
+      </div>
+      <div class="hero-marquee">
+        <div class="kw-row">
+          <span class="kw kw-domain"><span class="t-en">Blue-Green Infrastructure</span><span class="t-zh">蓝 绿 基 础 设 施</span></span>
+          <span class="kw kw-domain"><span class="t-en">Wetlands</span><span class="t-zh">湿 地</span></span>
+          <span class="kw kw-domain"><span class="t-en">Ecosystem Restoration</span><span class="t-zh">生 态 系 统 修 复</span></span>
+          <span class="kw kw-domain"><span class="t-en">Biodiversity</span><span class="t-zh">生 物 多 样 性</span></span>
+          <span class="kw kw-domain"><span class="t-en">Public Participation</span><span class="t-zh">公 众 参 与</span></span>
+          <span class="kw kw-domain" aria-hidden="true"><span class="t-en">Blue-Green Infrastructure</span><span class="t-zh">蓝 绿 基 础 设 施</span></span>
+          <span class="kw kw-domain" aria-hidden="true"><span class="t-en">Wetlands</span><span class="t-zh">湿 地</span></span>
+          <span class="kw kw-domain" aria-hidden="true"><span class="t-en">Ecosystem Restoration</span><span class="t-zh">生 态 系 统 修 复</span></span>
+          <span class="kw kw-domain" aria-hidden="true"><span class="t-en">Biodiversity</span><span class="t-zh">生 物 多 样 性</span></span>
+          <span class="kw kw-domain" aria-hidden="true"><span class="t-en">Public Participation</span><span class="t-zh">公 众 参 与</span></span>
+        </div>
+        <div class="kw-row kw-row-rev">
+          <span class="kw kw-method"><span class="t-en">Landscape Visualisation</span><span class="t-zh">景 观 可 视 化</span></span>
+          <span class="kw kw-method"><span class="t-en">Ecosystem Services</span><span class="t-zh">生 态 系 统 服 务</span></span>
+          <span class="kw kw-method"><span class="t-en">Participatory Co-design</span><span class="t-zh">参 与 式 协 同 设 计</span></span>
+          <span class="kw kw-method"><span class="t-en">Decision Analysis</span><span class="t-zh">决 策 分 析</span></span>
+          <span class="kw kw-method"><span class="t-en">Artificial Intelligence</span><span class="t-zh">人 工 智 能</span></span>
+          <span class="kw kw-method" aria-hidden="true"><span class="t-en">Landscape Visualisation</span><span class="t-zh">景 观 可 视 化</span></span>
+          <span class="kw kw-method" aria-hidden="true"><span class="t-en">Ecosystem Services</span><span class="t-zh">生 态 系 统 服 务</span></span>
+          <span class="kw kw-method" aria-hidden="true"><span class="t-en">Participatory Co-design</span><span class="t-zh">参 与 式 协 同 设 计</span></span>
+          <span class="kw kw-method" aria-hidden="true"><span class="t-en">Decision Analysis</span><span class="t-zh">决 策 分 析</span></span>
+          <span class="kw kw-method" aria-hidden="true"><span class="t-en">Artificial Intelligence</span><span class="t-zh">人 工 智 能</span></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- BIO row: full width -->
+    <div class="hero-body-row">
+      <div class="hero-left">
+        <p class="sec-label" style="margin-bottom:.5rem"><span class="t-en">About</span><span class="t-zh">关于我</span></p>
+        <h2 class="about-h" style="margin-bottom:.7rem"><span class="t-en">Understanding How <em>Nature's Value</em> Is Seen, Experienced and Acted Upon</span><span class="t-zh"><em>自然的价值</em>：人们如何看见、如何体验、如何行动</span></h2>
+        <div class="hero-desc">
+          <p class="t-en">When people experience a landscape, what do they notice, value and choose? This question has guided my research.</p>
+          <p class="t-en">Trained as a landscape architect and urban designer, I bring design thinking together with social science and ecology. I now work as a postdoctoral researcher in Ecosystem Management at ETH Zurich, exploring how digital technologies can support participatory ecosystem restoration. With IfScape, a simulation game I am developing, people can explore “what if” scenarios and see how restoration choices might shape future landscapes. I also investigate how AI could connect ecological evidence with citizens' observations, preferences and ideas, while exploring its potential and limitations through research with workshop participants in Scotland.</p>
+          <p class="t-en">My interest in these questions grew during my PhD at the University of Sheffield, where I studied urban wetlands in Guangzhou. Combining surveys, participatory mapping, choice experiments and ecological fieldwork, I explored how people perceive and value biodiversity, beauty and recreation, and how biophysical conditions and landscape features shape these perceptions and preferences.</p>
+          <p class="t-zh">人们在体验一片景观时，会注意到什么、看重什么、选择什么？这个问题一直指引着我的研究。</p>
+          <p class="t-zh">我接受过风景园林和城市设计的训练，将设计思维与社会科学和生态学结合起来。我现在是苏黎世联邦理工学院生态系统管理研究组的博士后研究员，探索数字技术如何支持参与式生态系统修复。我正在开发模拟游戏 IfScape，人们可以在其中探索“如果……会怎样”的情景，看到修复选择可能如何塑造未来的景观。我还研究人工智能如何把生态证据与公众的观察、偏好和想法联系起来，并通过对苏格兰工作坊参与者的研究，探讨它的潜力与局限。</p>
+          <p class="t-zh">我对这些问题的兴趣，是在谢菲尔德大学攻读博士期间逐渐形成的。当时我研究广州的城市湿地，结合问卷、参与式制图、选择实验和生态野外调查，探讨人们如何感知和评价生物多样性、美感和游憩，以及生物物理条件和景观特征如何塑造这些感知与偏好。</p>
+        </div>
+      </div>
+      <!-- NEWS START: paste news_output.html below -->
+        <div class="news-card">
+          <p class="news-label"><span class="t-en">Latest</span><span class="t-zh">最新动态</span></p>
+          <p class="news-text t-en">In September 2026, I gave an invited webinar for the IUCN WCPA Restoration Task Force on how AI can strengthen participatory ecosystem restoration. <a href="https://engage.iucn.org/group/iucn-world-commission-protected-areas-2026-2029/event/enhancing-participatory-ecosystem" target="_blank">Event page →</a></p>
+          <p class="news-text t-zh">2026 年 9 月，我受邀为世界自然保护联盟世界保护地委员会（WCPA）修复工作组做了一场线上研讨会，分享如何借助人工智能强化参与式生态系统修复。 <a href="https://engage.iucn.org/group/iucn-world-commission-protected-areas-2026-2029/event/enhancing-participatory-ecosystem" target="_blank">活动页面 →</a></p>
+        </div>
+<!-- NEWS END -->
+    </div>
+
+  </div>
+</section>
+
+<!-- RESEARCH -->
+<section style="border-bottom:1px solid var(--border2)" id="research">
+  <div class="container" style="padding-top:1.5rem">
+    <p class="sec-label" style="margin-bottom:.5rem"><span class="t-en">Research</span><span class="t-zh">学术研究</span></p>
+  </div>
+
+  
+  <!-- RESEARCH PROJECTS -->
+  <div id="panel-rprojects" class="rp-wrap">
+  <div class="container">
+    <div class="sec-header">
+      <div>
+        <h2 class="sec-h"><span class="t-en">Research Projects</span><span class="t-zh">研究项目</span></h2>
+      </div>
+    </div>
+    <div class="rp-grid">
+      <div class="rp-card rp-card-wide">
+        <p class="rp-num">01</p>
+        <h3 class="rp-title"><a href="https://re-flect.org/" target="_blank">re•flect</a></h3>
+        <p class="rp-role"><span class="t-en">Lead Researcher</span><span class="t-zh">主要研究员</span> · 2024–2027</p>
+        <div class="rp-desc">
+          <p class="t-en">re•flect is developing an interactive decision-support tool (IfScape) that visualises how daylight can be strategically used in river restoration. The tool allows stakeholders to explore “what if” scenarios, co-design restoration strategies, and reflect on different possibilities and trade-offs.</p>
+          <p class="t-en">The project focuses on two contrasting settings: rural Scotland, where rivers have lost much of their riparian woodland and are exposed to excessive sunlight, and urban Zurich, where 33% of waterways are hidden in underground culverts. Built using video game engine technology, IfScape brings together environmental data, ecological models, and planning regulations in an interactive 3D environment. Users can test different land-use and restoration scenarios in real time and better understand their potential impacts and trade-offs.</p>
+          <p class="t-en">I lead the day-to-day research work, including research design, literature reviews, spatial analysis, and socio-political research in Scotland and Zurich. I also develop IfScape, organise stakeholder workshops, write academic papers, present research findings to wider audiences, co-supervise theses, and design and manage the project website.</p>
+          <p class="t-zh">re•flect 正在开发一款交互式决策支持工具（IfScape），将日光在河流修复中的策略性应用可视化。借助这一工具，相关各方可以探索“如果……会怎样”的情景，共同设计修复策略，并思考不同的可能性与权衡。</p>
+          <p class="t-zh">项目聚焦两种截然不同的环境：苏格兰乡村的河流失去了大部分河岸林地，受到过度日照；苏黎世城市中，33% 的水道被埋于地下暗渠。IfScape 基于电子游戏引擎技术，在交互式三维环境中整合环境数据、生态模型和规划法规。用户可以实时测试不同的土地利用和修复情景，更好地理解其潜在影响与权衡。</p>
+          <p class="t-zh">我主导项目的日常研究工作，包括研究设计、文献综述，以及在苏格兰和苏黎世开展的空间分析与社会政治研究。我还负责开发 IfScape、组织利益相关方工作坊、撰写学术论文、向更广泛的受众展示研究成果、共同指导学生论文，并设计和管理项目网站。</p>
+        </div>
+        <div class="rp-videos">
+          <figure class="rp-video">
+            <video src="media/rural.mp4#t=0.5" controls preload="metadata" playsinline controlslist="nodownload" disablepictureinpicture oncontextmenu="return false"></video>
+            <figcaption><span class="t-en">Rural · Scotland</span><span class="t-zh">苏格兰乡村</span></figcaption>
+          </figure>
+          <figure class="rp-video">
+            <video src="media/urban.mp4#t=0.5" controls preload="metadata" playsinline controlslist="nodownload" disablepictureinpicture oncontextmenu="return false"></video>
+            <figcaption><span class="t-en">Urban · Zurich</span><span class="t-zh">苏黎世城市</span></figcaption>
+          </figure>
+        </div>
+        <div class="pill-links"><a href="https://re-flect.org/" target="_blank" class="pill"><span class="t-en">Project Website</span><span class="t-zh">项目网站</span></a></div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <!-- PAPERS -->
+  <div id="panel-papers" class="papers-wrap">
+  <div class="container">
+    <div class="sec-header">
+      <div>
+        <h2 class="sec-h"><span class="t-en">Peer-Reviewed Publications</span><span class="t-zh">同行评审论文</span></h2>
+      </div>
+      <a href="https://orcid.org/0000-0003-0945-2284" target="_blank" class="cta"><span class="t-en">Full list on ORCID</span><span class="t-zh">ORCID 完整列表</span> <svg viewBox="0 0 14 14" fill="none"><path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    </div>
+    <div class="papers-list">
+<!-- ARTICLES START: paste articles_output.html below -->
+        <div class="paper-card" onclick="togglePaper(this)">
+          <div class="p-thumb">
+            <div class="p-art" style="width:100px; height:70px; overflow:hidden; transition: all 0.3s;">
+              <img src="media/npj Urban Sustainability.jpg" alt="Paper Preview" style="width:100%; height:100%; object-fit: cover; display: block; transition: all 0.3s;">
+            </div>
+          </div>
+          <div class="p-meta">
+            <div class="p-meta-body">
+              <p class="p-venue">npj Urban Sustainability · (2026)</p>
+              <p class="p-title"><span class="t-en">Artificial intelligence for urban ecosystem restoration: reshaping social–ecological–technological interactions</span><span class="t-zh">人工智能赋能城市生态系统修复——重塑社会、生态与技术的互动关系</span></p>
+              <p class="p-authors"><span class="me">Zhai, X.</span>, Bach, P.M., Ghazoul, J., Casanelles-Abella, J., Buchecker, M., Dray, A.G., Sun, J., &amp; Kleinschroth, F.</p>
+            </div>
+            <div class="pill-links">
+              <a href="https://www.nature.com/articles/s42949-026-00453-7" target="_blank" class="pill">
+                <span class="t-en">Journal Website</span>
+                <span class="t-zh">访问期刊官网</span>
+              </a>
+            </div>
+            <div class="expand-btn"><svg viewBox="0 0 10 10" fill="none"><path d="M5 1v8M1 5h8" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg></div>
+          </div>
+          <div class="p-abstract">
+            <div class="p-abstract-inner">
+              <div class="abs-lang-btns"></div>
+              <div class="p-highlights-container">
+                <p class="p-highlights-label">
+                  <span class="t-en">Research Highlights</span>
+                  <span class="t-zh">研究亮点</span>
+                </p>
+                <div class="t-en"><ul class="highlights-list"><li>We examine how artificial intelligence (AI) supports integrated urban ecosystem restoration (UER) approaches by linking monitoring, simulation, and participatory processes within a social–ecological–technological systems framework, forming an AI-integrated UER feedback cycle.</li><li>AI can contribute to social-ecological monitoring, multisource data integration, landscape simulation, citizen understanding, co-design, and adaptive management in UER under expert oversight and with attention to associated risks.</li></ul></div>
+                <div class="t-zh"><div style="display: block; width: 100%;"><ul class="highlights-list"><li>本文基于社会、生态与技术系统框架，探讨人工智能如何通过衔接监测、模拟与公众参与过程，支持城市生态系统修复的综合方法，并形成一个融合人工智能的城市生态系统修复反馈循环</li><li>在专家监督并充分关注相关风险的前提下，人工智能可应用于社会生态监测、多源数据整合、景观模拟、公众认知、协同设计以及城市生态系统修复的适应性管理。</li></ul></div></div>
+                <div class="p-graphical-abstract"><img src="media/Graphical Abstract_npjUrbanSustainability2026.jpg" alt="Graphical Abstract"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="paper-card" onclick="togglePaper(this)">
+          <div class="p-thumb">
+            <div class="p-art" style="width:100px; height:70px; overflow:hidden; transition: all 0.3s;">
+              <img src="media/IUCN.jpg" alt="Paper Preview" style="width:100%; height:100%; object-fit: cover; display: block; transition: all 0.3s;">
+            </div>
+          </div>
+          <div class="p-meta">
+            <div class="p-meta-body">
+              <p class="p-venue">IUCN WCPA Technical Note · (2026) No.27</p>
+              <p class="p-title"><span class="t-en">Enhancing Participatory Ecosystem Restoration with Artificial Intelligence</span><span class="t-zh">借助人工智能强化参与式生态系统修复</span></p>
+              <p class="p-authors"><span class="me">Zhai, X.</span>, Bach, P.M., Ghazoul, J., Buchecker, M., Dray, A.G.,  &amp; Kleinschroth, F.</p>
+            </div>
+            <div class="pill-links">
+              <a href="https://iucn.org/resources/other-brief/iucn-wcpa-technical-note-27-enhancing-participatory-ecosystem-restoration" target="_blank" class="pill">
+                <span class="t-en">Journal Website</span>
+                <span class="t-zh">访问期刊官网</span>
+              </a>
+            </div>
+            <div class="expand-btn"><svg viewBox="0 0 10 10" fill="none"><path d="M5 1v8M1 5h8" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg></div>
+          </div>
+          <div class="p-abstract">
+            <div class="p-abstract-inner">
+              <div class="abs-lang-btns"></div>
+              <div class="p-highlights-container">
+                <p class="p-highlights-label">
+                  <span class="t-en">Research Highlights</span>
+                  <span class="t-zh">研究亮点</span>
+                </p>
+                <div class="t-en"><ul class="highlights-list"><li>This technical note provides practical guidance on using artificial intelligence (AI) to support participatory ecosystem restoration, i.e., restoration processes that actively and meaningfully engage local communities and relevant stakeholders, through: (1) AI-empowered inclusive ecosystem monitoring, (2) AI-supported collaborative planning and design, (3) AIfacilitated ecological knowledge communication, and (4) AI-enabled facilitation and reporting of community dialogues. Together, these application areas support key components of ecosystem restoration, namely assessment, planning and design, implementation, ongoing management, and monitoring and evaluation. Under expert oversight and with careful management of associated risks, AI can enhance local participation, bridge knowledge systems, and strengthen the ecological and social resilience of long-term restoration initiatives</li></ul></div>
+                <div class="t-zh"><div style="display: block; width: 100%;"><ul class="highlights-list"><li>这份技术说明提供了关于如何利用人工智能（AI）来支持参与式生态系统修复的实用指导。参与式生态系统修复是通过积极而有意义地让当地社区和相关利益相关者参与生态系统修复过程，具体包括：（1）AI赋能包容性生态监测，（2）AI支持协作规划与设计，（3）AI促进生态知识交流，（4）AI实现社区对话引导和报告。这些应用领域共同支持生态系统恢复的关键环节，即评估、规划与设计、实施、持续管理以及监测与评估。在专家监督下，并谨慎管理相关风险，AI能够增强地方参与、弥合知识体系差距，并提升长期恢复项目的生态和社会韧性</li></ul></div></div>
+                <div class="p-graphical-abstract"><img src="media/Graphical Abstract_IUCN2026.jpg" alt="Graphical Abstract"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="paper-card" onclick="togglePaper(this)">
+          <div class="p-thumb">
+            <div class="p-art" style="width:100px; height:70px; overflow:hidden; transition: all 0.3s;">
+              <img src="media/Landscape Ecology.jpg" alt="Paper Preview" style="width:100%; height:100%; object-fit: cover; display: block; transition: all 0.3s;">
+            </div>
+          </div>
+          <div class="p-meta">
+            <div class="p-meta-body">
+              <p class="p-venue">Landscape Ecology · (2026) Vol41:64</p>
+              <p class="p-title"><span class="t-en">Rethinking ecosystem service trade‐offs through perceived synergies and prioritisation: evidence from Haizhu National Wetland Park</span><span class="t-zh">基于感知协同与优先排序的生态系统服务权衡再思考——以海珠国家湿地公园为例</span></p>
+              <p class="p-authors"><span class="me">Zhai, X.</span>, Lange, E., &amp; Cameron, R.W.</p>
+            </div>
+            <div class="pill-links">
+              <a href="https://link.springer.com/article/10.1007/s10980-026-02317-y#Abs1" target="_blank" class="pill">
+                <span class="t-en">Journal Website</span>
+                <span class="t-zh">访问期刊官网</span>
+              </a>
+            </div>
+            <div class="expand-btn"><svg viewBox="0 0 10 10" fill="none"><path d="M5 1v8M1 5h8" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg></div>
+          </div>
+          <div class="p-abstract">
+            <div class="p-abstract-inner">
+              <div class="abs-lang-btns"></div>
+              <div class="p-highlights-container">
+                <p class="p-highlights-label">
+                  <span class="t-en">Research Highlights</span>
+                  <span class="t-zh">研究亮点</span>
+                </p>
+                <div class="t-en"><ul class="highlights-list"><li>Participatory mapping and choice experiments reveal perceived ES interactions.</li><li>Visitors prioritize aesthetics over biodiversity and recreation.</li><li>Aesthetics show spatial synergies with biodiversity and recreation.</li><li>Enhancing biodiversity–aesthetics synergies sustain welfare without added recreation.</li></ul></div>
+                <div class="t-zh"><div style="display: block; width: 100%;"><ul class="highlights-list"><li>参与式制图和选择实验揭示了感知的生态系统服务相互作用。</li><li>游客对美学的重视程度高于生物多样性和游憩。</li><li>美学与生物多样性和游憩表现出空间协同作用。</li><li>增强生物多样性与美学的协同作用可在不增加游憩的情况下维持福利。</li></ul></div></div>
+                <div class="p-graphical-abstract"><img src="media/Graphical Abstract_LandscEcol2026.jpg" alt="Graphical Abstract"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="paper-card" onclick="togglePaper(this)">
+          <div class="p-thumb">
+            <div class="p-art" style="width:100px; height:70px; overflow:hidden; transition: all 0.3s;">
+              <img src="media/Urban Ecosystems.jpg" alt="Paper Preview" style="width:100%; height:100%; object-fit: cover; display: block; transition: all 0.3s;">
+            </div>
+          </div>
+          <div class="p-meta">
+            <div class="p-meta-body">
+              <p class="p-venue">Urban Ecosystems · (2026) Vol29:2</p>
+              <p class="p-title"><span class="t-en">What we see is not all there is: Toward perception-based indicators of bird biodiversity</span><span class="t-zh">所见并非全貌——面向基于感知的鸟类生物多样性指标</span></p>
+              <p class="p-authors"><span class="me">Zhai, X.</span>, Lange, E., &amp; Cameron, R.W.</p>
+            </div>
+            <div class="pill-links">
+              <a href="https://link.springer.com/article/10.1007/s11252-026-01958-w" target="_blank" class="pill">
+                <span class="t-en">Journal Website</span>
+                <span class="t-zh">访问期刊官网</span>
+              </a>
+            </div>
+            <div class="expand-btn"><svg viewBox="0 0 10 10" fill="none"><path d="M5 1v8M1 5h8" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg></div>
+          </div>
+          <div class="p-abstract">
+            <div class="p-abstract-inner">
+              <div class="abs-lang-btns"></div>
+              <div class="p-highlights-container">
+                <p class="p-highlights-label">
+                  <span class="t-en">Research Highlights</span>
+                  <span class="t-zh">研究亮点</span>
+                </p>
+                <div class="t-en"><ul class="highlights-list"><li>Clear mismatches exist between perceived and monitored bird biodiversity across spatial areas.</li><li>Bird-rich zones were sometimes overlooked, while similar areas were perceived as unevenly biodiversity-supportive.</li><li>Perceived richness reflects short-term observations but fails to capture long-term biodiversity patterns.</li><li>Biodiversity perception is shaped by perceptual salience, including species visibility, spatial cues, and momentary experience.</li><li>Perceptions align with monitored data mainly for easily visible species, excluding unseen ones.</li><li>Spatial cues can enhance local perception but fail to represent overall ecological richness.</li></ul></div>
+                <div class="t-zh"><div style="display: block; width: 100%;"><ul class="highlights-list"><li>感知与监测的鸟类生物多样性在空间上存在明显不一致。</li><li>部分高鸟类丰富度区域被忽视，而相似区域的感知差异显著。</li><li>感知丰富度反映短期观测结果，但无法捕捉长期多样性格局。</li><li>生物多样性感知受知觉显著性影响，包括物种可见性、空间线索和瞬时体验。</li><li>感知主要与易观察物种的监测结果一致，未被观察到的物种常被忽略。</li><li>空间线索可增强局部感知，但难以反映整体生态丰富性。</li></ul></div></div>
+                <div class="p-graphical-abstract"><img src="media/Graphical Abstract_UrbanEcosystems2026.jpg" alt="Graphical Abstract"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="paper-card" onclick="togglePaper(this)">
+          <div class="p-thumb">
+            <div class="p-art" style="width:100px; height:70px; overflow:hidden; transition: all 0.3s;">
+              <img src="media/LAF081.jpg" alt="Paper Preview" style="width:100%; height:100%; object-fit: cover; display: block; transition: all 0.3s;">
+            </div>
+          </div>
+          <div class="p-meta">
+            <div class="p-meta-body">
+              <p class="p-venue">Landscape Architecture Frontiers · (2026) Vol14:1</p>
+              <p class="p-title"><span class="t-en">Synergistic Strategies for Urban Linear Physical Activities Spaces: Insights From a Quantitative Review</span><span class="t-zh">城市线性健身空间的协同路径:定量综述研究启示</span></p>
+              <p class="p-authors">Zhang, Y., <span class="me">Zhai, X.</span>, Chen, X., &amp; Tan, L.</p>
+            </div>
+            <div class="pill-links">
+              <a href="https://journal.hep.com.cn/laf/EN/10.15302/J-LAF-2026-0006" target="_blank" class="pill">
+                <span class="t-en">Journal Website</span>
+                <span class="t-zh">访问期刊官网</span>
+              </a>
+            </div>
+            <div class="expand-btn"><svg viewBox="0 0 10 10" fill="none"><path d="M5 1v8M1 5h8" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg></div>
+          </div>
+          <div class="p-abstract">
+            <div class="p-abstract-inner">
+              <div class="abs-lang-btns"></div>
+              <div class="p-highlights-container">
+                <p class="p-highlights-label">
+                  <span class="t-en">Research Highlights</span>
+                  <span class="t-zh">研究亮点</span>
+                </p>
+                <div class="t-en"><ul class="highlights-list"><li>A quantitative review of 103 studies examines linear spaces for physical activity.</li><li>15 environmental factors are assessed across jogging, walking, and cycling.</li><li>Environmental influences are compared at both macro and micro spatial scales.</li><li>7 general and 8 activity specific synergistic factors are identified.</li><li>5 spatial design models support healthier and more active urban environments.</li></ul></div>
+                <div class="t-zh"><div style="display: block; width: 100%;"><ul class="highlights-list"><li>基于103篇文献的定量综述，研究城市线性空间中的健身活动。</li><li>评估15项环境因素对慢跑、步行和骑行的影响。</li><li>从宏观和微观两个空间尺度比较不同环境因素的作用。</li><li>识别出7项普遍协同因素和8项活动差异化协同因素。</li><li>提出5种空间设计模式，为建设健康活力的城市环境提供支持。</li></ul></div></div>
+                <div class="p-graphical-abstract"><img src="media/Graphical Abstract_LAF2026.jpg" alt="Graphical Abstract"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="paper-card" onclick="togglePaper(this)">
+          <div class="p-thumb">
+            <div class="p-art" style="width:100px; height:70px; overflow:hidden; transition: all 0.3s;">
+              <img src="media/JoDLA.jpg" alt="Paper Preview" style="width:100%; height:100%; object-fit: cover; display: block; transition: all 0.3s;">
+            </div>
+          </div>
+          <div class="p-meta">
+            <div class="p-meta-body">
+              <p class="p-venue">Journal of Digital Landscape Architecture · (2025) 10-2025</p>
+              <p class="p-title"><span class="t-en">Developing an Ecology-Integrated Gaming Tool for Collaborative Landscape Design</span><span class="t-zh">面向协作式景观设计的生态融合型游戏工具开发</span></p>
+              <p class="p-authors"><span class="me">Zhai, X.</span>, Dray, A.G., Bach, P.M., Buchecker, M.,    Ghazoul, J., &amp; Kleinschroth, F.</p>
+            </div>
+            <div class="pill-links">
+              <a href="https://doi.org/10.14627/537754006" target="_blank" class="pill">
+                <span class="t-en">Journal Website</span>
+                <span class="t-zh">访问期刊官网</span>
+              </a>
+            </div>
+            <div class="expand-btn"><svg viewBox="0 0 10 10" fill="none"><path d="M5 1v8M1 5h8" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg></div>
+          </div>
+          <div class="p-abstract">
+            <div class="p-abstract-inner">
+              <div class="abs-lang-btns"></div>
+              <div class="p-highlights-container">
+                <p class="p-highlights-label">
+                  <span class="t-en">Research Highlights</span>
+                  <span class="t-zh">研究亮点</span>
+                </p>
+                <div class="t-en"><ul class="highlights-list"><li>A development framework for an ecology-integrated gaming tool for collaborative landscape design is presented.</li><li>The tool architecture integrates ecological data, models, planning rules, and 3D visualization.</li><li>Procedural Content Generation (PCG) enables automated generation of ecological landscape elements.</li><li>A graphical user interface (GUI) supports interactive exploration and combination of landscape strategies.</li></ul></div>
+                <div class="t-zh"><div style="display: block; width: 100%;"><ul class="highlights-list"><li>提出了一套面向协作式景观设计的生态融合型游戏工具开发框架。</li><li>该工具的架构整合了生态数据、生态模型、规划规则与三维可视化技术。</li><li>程序化内容生成（Procedural Content Generation，PCG）技术实现了生态景观要素的自动化生成。</li><li>图形用户界面（Graphical User Interface，GUI）支持用户交互式地探索与组合不同的景观规划策略。</li></ul></div></div>
+                <div class="p-graphical-abstract"><img src="media/Graphical Abstract_JoDLA2025.jpg" alt="Graphical Abstract"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="paper-card" onclick="togglePaper(this)">
+          <div class="p-thumb">
+            <div class="p-art" style="width:100px; height:70px; overflow:hidden; transition: all 0.3s;">
+              <img src="media/Wetlands.jpg" alt="Paper Preview" style="width:100%; height:100%; object-fit: cover; display: block; transition: all 0.3s;">
+            </div>
+          </div>
+          <div class="p-meta">
+            <div class="p-meta-body">
+              <p class="p-venue">Wetlands · (2021) Vol41:101</p>
+              <p class="p-title"><span class="t-en">The Influence of Covid‐19 on Perceived Health Effects of Wetland Parks in China</span><span class="t-zh">新冠疫情对中国湿地公园感知健康效益的影响</span></p>
+              <p class="p-authors"><span class="me">Zhai, X.</span>, &amp; Lange, E.</p>
+            </div>
+            <div class="pill-links">
+              <a href="https://doi.org/10.1007/s13157-021-01505-7" target="_blank" class="pill">
+                <span class="t-en">Journal Website</span>
+                <span class="t-zh">访问期刊官网</span>
+              </a>
+            </div>
+            <div class="expand-btn"><svg viewBox="0 0 10 10" fill="none"><path d="M5 1v8M1 5h8" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg></div>
+          </div>
+          <div class="p-abstract">
+            <div class="p-abstract-inner">
+              <div class="abs-lang-btns"></div>
+              <div class="p-highlights-container">
+                <p class="p-highlights-label">
+                  <span class="t-en">Research Highlights</span>
+                  <span class="t-zh">研究亮点</span>
+                </p>
+                <div class="t-en"><ul class="highlights-list"><li>A nationwide survey assessed perceived health benefits of wetland parks during COVID-19.</li><li>Perceived mental health benefits were greater than physical health benefits.</li><li>Perceived health benefits were slightly higher after the pandemic peak than before COVID-19.</li><li>Wildlife habitat services were perceived as the most important contributor to health benefits.</li><li>Health experts perceived lower health benefits from wetland parks than other respondents.</li></ul></div>
+                <div class="t-zh"><div style="display: block; width: 100%;"><ul class="highlights-list"><li>通过全国性问卷调查，评估了新冠疫情期间公众对湿地公园健康效益的感知。</li><li>公众感知到的湿地公园心理健康效益高于身体健康效益。</li><li>与疫情前相比，公众对疫情高峰期过后湿地公园健康效益的感知略有提升。</li><li>野生动物栖息地服务被认为是促进健康效益感知的最重要生态系统服务。</li><li>与其他受访群体相比，健康领域专家对湿地公园健康效益的评价较低。</li></ul></div></div>
+                <div class="p-graphical-abstract"><img src="media/Graphical Abstract_Wetlands2021.jpg" alt="Graphical Abstract"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="paper-card" onclick="togglePaper(this)">
+          <div class="p-thumb">
+            <div class="p-art" style="width:100px; height:70px; overflow:hidden; transition: all 0.3s;">
+              <img src="media/LAF045.jpg" alt="Paper Preview" style="width:100%; height:100%; object-fit: cover; display: block; transition: all 0.3s;">
+            </div>
+          </div>
+          <div class="p-meta">
+            <div class="p-meta-body">
+              <p class="p-venue">Landscape Architecture Frontiers · (2020) Vol8:3</p>
+              <p class="p-title"><span class="t-en">Using social media to explore perceptions of ecosystem services by nature-based solution projects</span><span class="t-zh">运用社交媒体探索基于自然解决方案中的生态系统服务感知</span></p>
+              <p class="p-authors"><span class="me">Zhai, X.</span>, &amp; Lange, E.</p>
+            </div>
+            <div class="pill-links">
+              <a href="http://journal.hep.com.cn/laf/EN/10.15302/J-LAF-1-020030" target="_blank" class="pill">
+                <span class="t-en">Journal Website</span>
+                <span class="t-zh">访问期刊官网</span>
+              </a>
+            </div>
+            <div class="expand-btn"><svg viewBox="0 0 10 10" fill="none"><path d="M5 1v8M1 5h8" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg></div>
+          </div>
+          <div class="p-abstract">
+            <div class="p-abstract-inner">
+              <div class="abs-lang-btns"></div>
+              <div class="p-highlights-container">
+                <p class="p-highlights-label">
+                  <span class="t-en">Research Highlights</span>
+                  <span class="t-zh">研究亮点</span>
+                </p>
+                <div class="t-en"><ul class="highlights-list"><li>Social media data reveal public perceptions of wetland park ecosystem services.</li><li>Recreation, aesthetics, and habitat are the most widely perceived services.</li><li>Recreation and aesthetic perceptions are strongly interconnected.</li><li>Flowering plants and colourful foliage shape perceptions of aesthetic value.</li><li>Birds are central to public perceptions of habitat services.</li></ul></div>
+                <div class="t-zh"><div style="display: block; width: 100%;"><ul class="highlights-list"><li>社交媒体数据揭示了公众对湿地公园生态系统服务的认知。</li><li>休闲游憩、景观审美和生境保护是公众感知最强的三类服务。</li><li>公众对休闲游憩和景观审美的感知密切相关。</li><li>开花植物和彩叶树种是影响景观审美感知的重要因素。</li><li>鸟类是公众感知湿地公园生境服务的关键。</li></ul></div></div>
+                <div class="p-graphical-abstract"><img src="media/Graphical Abstract_LAF2020.jpg" alt="Graphical Abstract"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<!-- ARTICLES END -->
+    </div>
+  </div><!-- /papers -->
+
+  <!-- CONFERENCES -->
+  <div id="panel-conferences" class="conf-slider-wrap">
+    <div class="conf-slider-head container">
+      <div class="sec-header"><div><h2 class="sec-h"><span class="t-en">Conferences</span><span class="t-zh">会议</span></h2></div></div>
+    </div>
+    <div class="container"><div class="conf-track-outer" id="confTrackOuter">
+    <div class="conf-deck" id="confDeck">
+<!-- CONFERENCES START: paste conferences_output.html below -->
+      <div class="conf-slide" style="background:linear-gradient(135deg,#2a6e8e,#0a7c6e)">
+        <div class="conf-slide-inner">
+          <p class="conf-slide-badge">2025</p>
+          <p class="conf-slide-event">Bratislava, Slovakia</p>
+          <h3 class="conf-slide-title"><span class="t-en">Fostering Participatory Urban River Restoration through an Ecologically-Integrated 3D Visualisation Tool</span><span class="t-zh">通过融合生态要素的三维可视化工具促进参与式城市河流修复</span></h3>
+          <p class="conf-slide-venue"><span class="t-en">IALE 2025 European Landscape Ecology Congress</span><span class="t-zh">国际景观生态学协会 2025 欧洲景观生态学大会</span></p>
+          <div class="conf-slide-footer">
+            <span class="conf-slide-type"><span class="t-en">Oral Presentation</span><span class="t-zh">口头报告</span></span>
+            <span class="conf-slide-date">September 2025</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="conf-slide" style="background:linear-gradient(135deg,#1a5878,#0e6e7a)">
+        <div class="conf-slide-inner">
+          <p class="conf-slide-badge">2025</p>
+          <p class="conf-slide-event">Dessau, Germany</p>
+          <h3 class="conf-slide-title"><span class="t-en">Developing an Ecology-Integrated Gaming Tool for Collaborative Landscape Design</span><span class="t-zh">面向协同景观设计的融合生态要素的游戏化工具开发</span></h3>
+          <p class="conf-slide-venue"><span class="t-en">Digital Landscape Architecture Conference</span><span class="t-zh">数字景观建筑国际会议</span></p>
+          <div class="conf-slide-footer">
+            <span class="conf-slide-type"><span class="t-en">Oral Presentation</span><span class="t-zh">口头报告</span></span>
+            <span class="conf-slide-date">June 2025</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="conf-slide" style="background:linear-gradient(135deg,#2a7e7a,#0a8c80)">
+        <div class="conf-slide-inner">
+          <p class="conf-slide-badge">2025</p>
+          <p class="conf-slide-event">Berlin, Germany</p>
+          <h3 class="conf-slide-title"><span class="t-en">Interactive Visualisation Tools for Participatory River Restoration</span><span class="t-zh">面向参与式河流修复的交互式可视化工具</span></h3>
+          <p class="conf-slide-venue"><span class="t-en">Sustainability Science Summit</span><span class="t-zh">可持续发展科学峰会</span></p>
+          <div class="conf-slide-footer">
+            <span class="conf-slide-type"><span class="t-en">Seminar Co-chair</span><span class="t-zh">研讨会联合主持人</span></span>
+            <span class="conf-slide-date">February 2025</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="conf-slide" style="background:linear-gradient(135deg,#1e6472,#0a7c6e)">
+        <div class="conf-slide-inner">
+          <p class="conf-slide-badge">2025</p>
+          <p class="conf-slide-event">Dübendorf， Switzerland</p>
+          <h3 class="conf-slide-title"><span class="t-en">Potential of Using Generative Artificial Intelligence for Participatory River Restoration</span><span class="t-zh">利用生成式人工智能支持参与式河流修复的潜力</span></h3>
+          <p class="conf-slide-venue"><span class="t-en">ETH Domain Conference: Social Sciences on Environment, Technology &amp; Sustainability</span><span class="t-zh">ETH领域会议：环境、技术与可持续性的社会科学</span></p>
+          <div class="conf-slide-footer">
+            <span class="conf-slide-type"><span class="t-en">Oral Presentation</span><span class="t-zh">口头报告</span></span>
+            <span class="conf-slide-date">January 2025</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="conf-slide" style="background:linear-gradient(135deg,#246878,#0e7c6a)">
+        <div class="conf-slide-inner">
+          <p class="conf-slide-badge">2024</p>
+          <p class="conf-slide-event">Istanbul, Turkey</p>
+          <h3 class="conf-slide-title"><span class="t-en">Sustaining and Managing Ecosystem Services in Urban Wetlands for ALL</span><span class="t-zh">面向人类与生物共同体的城市湿地生态系统服务维持与管理</span></h3>
+          <p class="conf-slide-venue"><span class="t-en">International Federation of Landscape Architects (IFLA) 60th World Congress</span><span class="t-zh">国际风景园林师联合会（IFLA）第60届世界大会</span></p>
+          <div class="conf-slide-footer">
+            <span class="conf-slide-type"><span class="t-en">Oral Presentation</span><span class="t-zh">口头报告</span></span>
+            <span class="conf-slide-date">Sept 2024</span>
+          </div>
+        </div>
+      </div>
+<!-- CONFERENCES END -->
+    </div>
+    </div></div><!-- /conf-track-outer /container -->
+    <div class="conf-slider-nav" id="confNav">
+      <button class="conf-arrow" id="confPrev"><svg viewBox="0 0 14 14" fill="none"><path d="M9 2L4 7l5 5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      <div class="conf-dots" id="confDots"></div>
+      <button class="conf-arrow" id="confNext"><svg viewBox="0 0 14 14" fill="none"><path d="M5 2l5 5-5 5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+    </div>
+
+    <!-- INVITED TALKS -->
+    <div class="talks">
+      <div class="conf-slider-head container">
+        <div class="sec-header"><div><h2 class="sec-h"><span class="t-en">Invited Talks &amp; Seminars</span><span class="t-zh">特邀报告与研讨会</span></h2></div></div>
+      </div>
+      <div class="container"><div class="conf-track-outer" id="talksTrackOuter">
+      <div class="conf-deck" id="talksDeck">
+<!-- TALKS START: paste talks_output.html below -->
+      <div class="conf-slide talk-slide">
+        <div class="conf-slide-inner">
+          <p class="conf-slide-badge">2026</p>
+          <p class="conf-slide-event">Online</p>
+          <h3 class="conf-slide-title"><span class="t-en">Enhancing Participatory Ecosystem Restoration with Artificial Intelligence</span><span class="t-zh">借助人工智能强化参与式生态系统修复</span></h3>
+          <p class="conf-slide-venue"><span class="t-en">IUCN World Commission on Protected Areas (WCPA) Restoration Task Force</span><span class="t-zh">世界自然保护联盟世界保护地委员会（WCPA）修复工作组</span></p>
+          <div class="talk-audience">
+            <p class="talk-audience-label"><span class="t-en">Audience</span><span class="t-zh">听众</span></p>
+            <p class="talk-audience-text"><span class="t-en">Global environmental organisations, practitioners, enthusiasts and researchers</span><span class="t-zh">全球环境组织、实践者、爱好者和研究人员</span></p>
+          </div>
+          <a href="https://engage.iucn.org/group/iucn-world-commission-protected-areas-2026-2029/event/enhancing-participatory-ecosystem" target="_blank" class="conf-slide-link"><span class="t-en">Event Page</span><span class="t-zh">活动页面</span> →</a>
+          <div class="conf-slide-footer">
+            <span class="conf-slide-type"><span class="t-en">Webinar</span><span class="t-zh">线上研讨会</span></span>
+            <span class="conf-slide-date">September 2026</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="conf-slide talk-slide">
+        <div class="conf-slide-inner">
+          <p class="conf-slide-badge">2025</p>
+          <p class="conf-slide-event">Hannover, Germany</p>
+          <h3 class="conf-slide-title"><span class="t-en">Potential of Using Generative Artificial Intelligence for Participatory River Restoration</span><span class="t-zh">利用生成式人工智能支持参与式河流修复的潜力</span></h3>
+          <p class="conf-slide-venue"><span class="t-en">Institute of Environmental Planning, Leibniz University Hannover</span><span class="t-zh">汉诺威莱布尼茨大学 环境规划系</span></p>
+          <div class="talk-audience">
+            <p class="talk-audience-label"><span class="t-en">Audience</span><span class="t-zh">听众</span></p>
+            <p class="talk-audience-text"><span class="t-en">Interested researchers and students in the institute</span><span class="t-zh">系内感兴趣的研究人员和学生</span></p>
+          </div>
+          <div class="conf-slide-footer">
+            <span class="conf-slide-type"><span class="t-en">Invited Seminar</span><span class="t-zh">特邀报告</span></span>
+            <span class="conf-slide-date"></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="conf-slide talk-slide">
+        <div class="conf-slide-inner">
+          <p class="conf-slide-badge">2025</p>
+          <p class="conf-slide-event">Zurich, Switzerland</p>
+          <h3 class="conf-slide-title"><span class="t-en">From the Perception of Restored Wetlands to the Visualisation and Co-design of River Restoration</span><span class="t-zh">从修复湿地的感知到河流修复的可视化与协同设计</span></h3>
+          <p class="conf-slide-venue"><span class="t-en">Chair of Planning of Landscape and Urban Systems (PLUS), ETH Zurich</span><span class="t-zh">苏黎世联邦理工学院 景观与城市系统规划研究组（PLUS）</span></p>
+          <div class="talk-audience">
+            <p class="talk-audience-label"><span class="t-en">Audience</span><span class="t-zh">听众</span></p>
+            <p class="talk-audience-text"><span class="t-en">Members of the PLUS group</span><span class="t-zh">PLUS 研究组成员</span></p>
+          </div>
+          <div class="conf-slide-footer">
+            <span class="conf-slide-type"><span class="t-en">Invited Seminar</span><span class="t-zh">特邀报告</span></span>
+            <span class="conf-slide-date"></span>
+          </div>
+        </div>
+      </div>
+<!-- TALKS END -->
+      </div>
+      </div></div>
+      <div class="conf-slider-nav" id="talksNav">
+        <button class="conf-arrow" id="talksPrev"><svg viewBox="0 0 14 14" fill="none"><path d="M9 2L4 7l5 5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <div class="conf-dots" id="talksDots"></div>
+        <button class="conf-arrow" id="talksNext"><svg viewBox="0 0 14 14" fill="none"><path d="M5 2l5 5-5 5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<!-- DESIGN -->
+<section class="sec" id="design">
+  <div class="container">  <div class="sec-header">
+    <div><p class="sec-label"><span class="t-en">Design Portfolio</span><span class="t-zh">设计作品集</span></p><h2 class="sec-h"><span class="t-en">Urban Landscape Practice Projects · Built Works</span><span class="t-zh">城市景观实践项目 · 建成项目</span></h2></div>
+    <a href="#" class="cta"><span class="t-en">Full portfolio</span><span class="t-zh">完整作品集</span> <svg viewBox="0 0 14 14" fill="none"><path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+  </div>
+  <div class="d-projects">
+    <div class="d-project">
+      <p class="d-cat"><span class="t-en">Landscape Architecture &amp; Urban Design</span><span class="t-zh">风景园林与城市设计</span></p>
+      <h3 class="d-title"><span class="t-en">Yunnan Agricultural Vocational College (Jiaoling Campus) · Yunnan, China</span><span class="t-zh">云南农业职业学院（茭菱校区） · 中国云南</span></h3>
+      <p class="d-role"><span class="t-en">Role: Core Designer</span><span class="t-zh">角色：核心设计人员</span></p>
+      <div class="d-photos d-photos-3">
+      <img src="media/NZJL_1.jpg" alt="Yunnan Agricultural Vocational College, Jiaoling Campus, photo 1" loading="lazy" draggable="false" oncontextmenu="return false">
+      <img src="media/NZJL_3.jpg" alt="Yunnan Agricultural Vocational College, Jiaoling Campus, photo 2" loading="lazy" draggable="false" oncontextmenu="return false">
+      <img src="media/NZJL_4.jpg" alt="Yunnan Agricultural Vocational College, Jiaoling Campus, photo 3" loading="lazy" draggable="false" oncontextmenu="return false">
+      </div>
+    </div>
+    <div class="d-project">
+      <p class="d-cat"><span class="t-en">Landscape Architecture &amp; Urban Design</span><span class="t-zh">风景园林与城市设计</span></p>
+      <h3 class="d-title"><span class="t-en">Landscape Renovation of Moonlight City Town, Shangri-La · Yunnan, China</span><span class="t-zh">香格里拉月光城小镇景观提升改造 · 中国云南</span></h3>
+      <p class="d-role"><span class="t-en">Role: Core Designer</span><span class="t-zh">角色：核心设计人员</span></p>
+      <div class="d-photos d-photos-5">
+      <img src="media/YGC_5.jpg" alt="Moonlight City Town, Shangri-La, photo 1" loading="lazy" draggable="false" oncontextmenu="return false">
+      <img src="media/YGC_2.jpg" alt="Moonlight City Town, Shangri-La, photo 2" loading="lazy" draggable="false" oncontextmenu="return false">
+      <img src="media/YGC_3.jpg" alt="Moonlight City Town, Shangri-La, photo 3" loading="lazy" draggable="false" oncontextmenu="return false">
+      <img src="media/YGC_4.jpg" alt="Moonlight City Town, Shangri-La, photo 4" loading="lazy" draggable="false" oncontextmenu="return false">
+      <img src="media/YGC_1.jpg" alt="Moonlight City Town, Shangri-La, photo 5" loading="lazy" draggable="false" oncontextmenu="return false">
+      </div>
+    </div>
+  </div></div>
+</section>
+
+<!-- PHOTOGRAPHY -->
+<section class="sec" id="photography">
+  <div class="container">  <div class="sec-header">
+    <div><p class="sec-label"><span class="t-en">Photography</span><span class="t-zh">摄影</span></p><h2 class="sec-h"><span class="t-en">Nature Through My Lens</span><span class="t-zh">我镜头下的山水自然</span></h2></div>
+  </div>
+  <div class="photo-grid">
+    <div class="photo-item"><img src="media/GKUW3260.jpg" alt="Photograph by Xuezhu Zhai" loading="lazy" draggable="false" oncontextmenu="return false"></div>
+    <div class="photo-item"><img src="media/DSC01385.jpg" alt="Photograph by Xuezhu Zhai" loading="lazy" draggable="false" oncontextmenu="return false"></div>
+    <div class="photo-item"><img src="media/BDAC0805.jpg" alt="Photograph by Xuezhu Zhai" loading="lazy" draggable="false" oncontextmenu="return false"></div>
+    <div class="photo-item"><img src="media/DSC06664.jpg" alt="Photograph by Xuezhu Zhai" loading="lazy" draggable="false" oncontextmenu="return false"></div>
+    <div class="photo-item"><img src="media/DSC01600.jpg" alt="Photograph by Xuezhu Zhai" loading="lazy" draggable="false" oncontextmenu="return false"></div>
+    <div class="photo-item"><img src="media/DSC02369.jpg" alt="Photograph by Xuezhu Zhai" loading="lazy" draggable="false" oncontextmenu="return false"></div>
+  </div></div>
+</section>
+
+<!-- FOOTER -->
+<footer id="contact">
+  <div class="footer-inner">
+  <div class="f-name">Xuezhu Zhai</div>
+  <a class="f-email" href="mailto:xuezhu.zhai@usys.ethz.ch">xuezhu.zhai@usys.ethz.ch</a>
+  <p class="f-copy"><span class="t-en">Copyright © 2026 Xuezhu Zhai, unless otherwise noted.</span><span class="t-zh">© 2026 除另有说明外，版权归翟雪竹所有。</span></p>
+  </div>
+</footer>
+
+<script>
+// LANG
+function setLang(lang) {
+  document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+  document.getElementById('btn-zh').classList.toggle('active', lang === 'zh');
+  document.body.classList.toggle('lang-zh', lang === 'zh');
+  document.documentElement.lang = lang === 'zh' ? 'zh-Hans' : 'en';
+}
+
+// NAV HELPER
+function navScrollTo(id) {
+  const el = document.querySelector(id);
+  if (el) el.scrollIntoView({ behavior: 'smooth' });
+}
+
+// SCROLL SPY
+const spySections = document.querySelectorAll('section[id]');
+const navAs = document.querySelectorAll('.nav-main > li > a');
+const spy = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting)
+      navAs.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + e.target.id));
+  });
+}, { threshold: 0.2 });
+spySections.forEach(s => spy.observe(s));
+
+// TABS
+function switchTab(id, btn) {
+  ['papers','conferences','rprojects'].forEach(p =>
+    document.getElementById('panel-'+p).style.display = 'none'
+  );
+  document.getElementById('panel-'+id).style.display = 'block';
+  document.querySelectorAll('.r-tab').forEach(t => t.classList.remove('active'));
+  const tabBtn = btn || document.getElementById('tab-'+id);
+  if (tabBtn) tabBtn.classList.add('active');
+}
+
+
+// PAPERS
+function togglePaper(card) {
+  const wasOpen = card.classList.contains('open');
+  document.querySelectorAll('.paper-card.open').forEach(c => c.classList.remove('open'));
+  if (!wasOpen) card.classList.add('open');
+}
+function switchAbsLang(e, btn, lang) {
+  e.stopPropagation();
+  const inner = btn.closest('.p-abstract-inner');
+  inner.querySelectorAll('.abs-lang-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  inner.querySelectorAll('.abs-text').forEach(t => t.classList.toggle('hidden', t.dataset.lang !== lang));
+}
+
+// CARD SLIDERS (conferences, invited talks)
+const CARD_SLIDER_VISIBLE = 3;
+
+function initCardSlider(prefix) {
+  const trackOuter = document.getElementById(prefix + 'TrackOuter');
+  const deck = document.getElementById(prefix + 'Deck');
+  const slides = Array.from(deck.querySelectorAll('.conf-slide'));
+  const max = Math.max(0, slides.length - CARD_SLIDER_VISIBLE);
+  document.getElementById(prefix + 'Dots').innerHTML = Array.from({ length: max + 1 }, (_, i) =>
+    `<button class="conf-dot-item${i === 0 ? ' active' : ''}"></button>`).join('');
+  const dotBtns = Array.from(document.querySelectorAll(`#${prefix}Dots .conf-dot-item`));
+  let current = 0;
+  let wheelLocked = false;
+
+  // Nothing to slide: all cards are already visible
+  if (max === 0) {
+    document.getElementById(prefix + 'Nav').style.display = 'none';
+    return;
+  }
+
+  function getCardStep() {
+    const gap = parseFloat(getComputedStyle(deck).gap) || 24;
+    return slides[0].getBoundingClientRect().width + gap;
+  }
+
+  function update() {
+    deck.style.transform = `translateX(-${current * getCardStep()}px)`;
+    dotBtns.forEach((dot, i) => dot.classList.toggle('active', i === current));
+  }
+
+  function go(dir) {
+    current = Math.max(0, Math.min(max, current + dir));
+    update();
+  }
+
+  // Arrow buttons
+  document.getElementById(prefix + 'Prev').addEventListener('click', () => go(-1));
+  document.getElementById(prefix + 'Next').addEventListener('click', () => go(1));
+
+  // Dots
+  dotBtns.forEach((dot, i) => dot.addEventListener('click', () => {
+    current = i;
+    update();
+  }));
+
+  // Mouse wheel (vertical or horizontal)
+  trackOuter.addEventListener('wheel', (e) => {
+    const isH = Math.abs(e.deltaX) > Math.abs(e.deltaY);
+    const delta = isH ? e.deltaX : e.deltaY;
+    if (Math.abs(delta) < 5) return;
+    e.preventDefault();
+    if (wheelLocked) return;
+    wheelLocked = true;
+    go(delta > 0 ? 1 : -1);
+    setTimeout(() => { wheelLocked = false; }, 500);
+  }, { passive: false });
+
+  // Mouse drag
+  let dragStartX = null;
+  let dragMoved = false;
+  trackOuter.addEventListener('mousedown', (e) => {
+    dragStartX = e.clientX;
+    dragMoved = false;
+    deck.style.transition = 'none';
+    trackOuter.classList.add('is-dragging');
+  });
+  document.addEventListener('mousemove', (e) => {
+    if (dragStartX === null) return;
+    if (Math.abs(e.clientX - dragStartX) > 5) dragMoved = true;
+  });
+  document.addEventListener('mouseup', (e) => {
+    if (dragStartX === null) return;
+    const delta = dragStartX - e.clientX;
+    deck.style.transition = '';
+    trackOuter.classList.remove('is-dragging');
+    if (dragMoved && Math.abs(delta) > 60) go(delta > 0 ? 1 : -1);
+    else update();
+    dragStartX = null;
+    dragMoved = false;
+  });
+
+  // Touch swipe
+  let touchX = null;
+  trackOuter.addEventListener('touchstart', e => { touchX = e.touches[0].clientX; }, {passive:true});
+  trackOuter.addEventListener('touchend', e => {
+    if (touchX === null) return;
+    const dx = touchX - e.changedTouches[0].clientX;
+    if (Math.abs(dx) > 50) go(dx > 0 ? 1 : -1);
+    touchX = null;
+  }, {passive:true});
+}
+
+initCardSlider('conf');
+initCardSlider('talks');
+</script>
+</body>
+</html>
